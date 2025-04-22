@@ -22,6 +22,7 @@ label = "Miss..."
 ########################################
 # Define the character group.
 [character]
+  label = "Latchkeys"
 
 # Define stats.
 [character.stats]
@@ -31,120 +32,153 @@ reason = "Reason"
 presence = "Presence"
 sensitivity = "Sensitivity"
 
-# Define attributes.
-[character.attributesTop]
+[character.description.style]
+  label = "Style"
+  value = """
+    <p><strong>xxx</strong></p>
+    <p><em>pick one or make up your own: TJ Maxximalist, Cargo shorts and Triforce t-shirt, None More Goth, Williamsburg Warrior, 
+    Popped Collar Princeling, All the Scarves, I'm Too Emo for My Face, Livestrong, Bootcut & Boogie, Hoodie Under Blazer, 
+    Matching Sneakers</em></p>"""
+[character.description.takesyouback]
+  label = "Takes You Back"
+  value = """
+  <ol>
+    <li>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+    </li>
+</ol>
+<p></p>
+<p><em>pick three or make up your own: Girl Talk: A Game of Truth or Dare, The Konami Code, The Oregon Trail, BOOK IT!, 
+Double Dare, prank phone calls, Garbage Pail Kids, M.U.S.C.L.E., Rogue, The Baby-Sitters Club, My Buddy/Kid Sister, 
+Jean-Claude Van Damme, Duck Tales ("00-oo!"), reading sleepovers, You Can't Do That On Television, Huffy 10-speed, 
+heading home when the streetlights flickered on, Friday the 13th: The Series, proton packs, Artax in the Swamp of Sadness, 
+Waco, "A very special episode," Fangoria, mixtapes, Starlog, Lisa Frank, Yo! MTV Raps, Tiger Beat, Easy Bake Oven, The Day After, 
+"Who Killed Laura Palmer?", Choose Your Own Adventure, Fighting Fantasy, wood paneling, the Cabbage Patch riots, 
+the L.A. riots, the Care Bear stare, the Walkman, TV show theme songs, mall concerts, horse girls, Dungeon!, Headbangers Ball, 
+Baby Jessica, Space Shuttle Challenger, Memphis Group design, Brookstone, record stores, The Joy of Painting, passing notes in class</em></p>"""
+[character.description.notes]
+  label = "Notes"
 
-#[character.attributesTop.style]
-#type = "LongText"
-#label = "Style"
-#description = "Pick one, or make up your own"
-#[character.attributesTop.takesYouBack]
-#type = "LongText"
-#label = "Takes You Back"
-#description = "Pick three, or make up your own"
+
+[character.attributes.style]
+position = "left"
+label = "Style"
+type = "Text"
+
+[character.attributes.takesyouback]
+position = "left"
+label = "Takes You Back"
+type = "TextMany"
+lines = 3
 
 
-
-[character.attributesTop.conditions]
+[character.attributes.conditions]
+position = "top"
 type = "TextMany"
 label = "Conditions"
 description = "When a Condition applies, take disadvantage"
-lines = 5
+lines = 3
 
 
-
-
-[character.attributesTop.keyofthechild]
+[character.attributes.keyofthechild]
+position = "top"
 type = "ListMany"
 label = "The Key of the Child"
 description = "When you turn this Key, mark and narrate any of the below flashbacks that you wish."
 
-[character.attributesTop.keyofthechild.options.routine]
+[character.attributes.keyofthechild.options.routine]
 label = "Home routine"
 tooltip = "A flashback showing your latchkey kid routine whenever you got home from school."
-[character.attributesTop.keyofthechild.options.outsider]
+[character.attributes.keyofthechild.options.outsider]
 label = "Outsider"
 tooltip = "A flashback showing how you were an outsider among your school peers."
-[character.attributesTop.keyofthechild.options.parents]
+[character.attributes.keyofthechild.options.parents]
 label = "Imperfect parents"
 tooltip = "A flashback to the moment when you realized your parents were imperfect."
-[character.attributesTop.keyofthechild.options.happy]
+[character.attributes.keyofthechild.options.happy]
 label = "Genuine happiness"
 tooltip = "A flashback to when you felt genuine happiness as a child."
-[character.attributesTop.keyofthechild.options.trauma]
+[character.attributes.keyofthechild.options.trauma]
 label = "Trauma"
 tooltip = "A flashback to when you experienced childhood trauma."
-[character.attributesTop.keyofthechild.options.growingup]
+[character.attributes.keyofthechild.options.growingup]
 label = "Growing up"
 tooltip = "A flashback to the moment when you realized childhood wasn't forever."
-[character.attributesTop.keyofthechild.options.tvodyssey]
+[character.attributes.keyofthechild.options.tvodyssey]
 label = "TV Odyssey"
 tooltip = "A flashback to when you first discovered TV Odyssey."
 
-[character.attributesTop.keyofdesolation]
+
+[character.attributes.keyofdesolation]
+position = "top"
 type = "ListMany"
 label = "The Key of Desolation"
 description = "When you turn this key, mark the first empty box."
 
-[character.attributesTop.keyofdesolation.options.arch]
+[character.attributes.keyofdesolation.options.arch]
 label = "THE SANDSTONE ARCH"
 tooltip = "Unlock the Dawn question: 'Did you receive a Signal from the Other Side?'"
-[character.attributesTop.keyofdesolation.options.well]
+[character.attributes.keyofdesolation.options.well]
 label = "THE FATHOMLESS WELL"
 tooltip = "Your Reason modifier is reduced by 1 and your Sensitivity modifier is increased by 1 (max 3)."
-[character.attributesTop.keyofdesolation.options.monolith]
+[character.attributes.keyofdesolation.options.monolith]
 label = "THE WANDERING MONOLITH"
 tooltip = "Gain the Consult The Big Man Move."
-[character.attributesTop.keyofdesolation.options.desert]
+[character.attributes.keyofdesolation.options.desert]
 label = "THE CHROMATIC DESERT"
 tooltip = """
     You can no longer be perceived by other characters and all memory of you is erased—it’s like you never existed.
     You can continue to conduct investigations, but the Clues you find are only available if you narrate them into an
     Odyssey tape scene."""
-[character.attributesTop.keyofdesolation.options.signal]
+[character.attributes.keyofdesolation.options.signal]
 label = "THE PURE-WHITE SIGNAL"
 tooltip = "You lose contact with this world altogether. Tell the Keeper to play a white Odyssey tape and then retire this character."
 
 
-# Define sidebar details.
-[character.attributesLeft]
 
-
-[character.attributesLeft.dawnquestions]
+[character.attributes.dawnquestions]
+    position = "left"
     type = "ListMany"
     label = "Dawn questions"
     description = "The first is always marked. The second is always marked after it is unlocked. At the beginning of a session, mark two more (four total marked)."
-    [character.attributesLeft.dawnquestions.options.mystery]
+    [character.attributes.dawnquestions.options.mystery]
         label = "Mystery solved"
         tooltip = "Did the Latchkeys resolve a mystery?"
-    [character.attributesLeft.dawnquestions.options.signal]
+    [character.attributes.dawnquestions.options.signal]
         label = "Signal from the Other Side"
         tooltip = "Did you receive a Signal from the Other Side? (locked until you mark THE SANDSTONE ARCH)"
-    [character.attributesLeft.dawnquestions.options.memory]
+    [character.attributes.dawnquestions.options.memory]
         label = "Good memory"
         tooltip = "Did you share a good memory from your childhood?"
-    [character.attributesLeft.dawnquestions.options.vulnerable]
+    [character.attributes.dawnquestions.options.vulnerable]
         label = "Be vulnerable"
         tooltip = "Were you vulnerable with someone?"
-    [character.attributesLeft.dawnquestions.options.deeplake]
+    [character.attributes.dawnquestions.options.deeplake]
         label = "Deep Lake reconnection"
         tooltip = "Did you go out of your way to reconnect with Deep Lake?"
-    [character.attributesLeft.dawnquestions.options.monologue]
+    [character.attributes.dawnquestions.options.monologue]
         label = "Chilling monologue"
         tooltip = "Did you deliver a chilling monologue about something that happened to you in the past?"
-    [character.attributesLeft.dawnquestions.options.cutloose]
+    [character.attributes.dawnquestions.options.cutloose]
         label = "Cut loose"
         tooltip = "Did you cut loose for once?"
 
-[character.attributesLeft.xp]
+[character.attributes.xp]
+position = "left"
 type = "Xp"
 label = "XP Track"
 description = "When you answer a Dawn question 'yes', or when a move says to, mark XP."
 max = 6
 default = 0
 
-
-[character.attributesLeft.advances]
+[character.attributes.advances]
+position = "left"
 type = "ListMany"
 label = "Advances"
 description = "When you Advance, pick any one."
@@ -155,7 +189,6 @@ options = [
     "Unmark all the items in Your Corner of the House."
 ]
 
-
 # Define groups for moves.
 [character.moveTypes]
 basic = "Basic Moves"
@@ -165,7 +198,7 @@ other = "Other Moves"
 # Define groups for equipment.
 [character.equipmentTypes]
 housecorner = "Your corner of the house"
-
+housecornermarked = "Your corner of the house (marked items)"
 
 ########################################
 ## NPCS ################################
